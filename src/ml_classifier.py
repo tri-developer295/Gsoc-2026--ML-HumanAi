@@ -20,19 +20,15 @@ print("="*40)
 print("FIXED ML CLASSIFIER")
 print("="*40)
 
-# ─────────────────────────────────
 # LOAD MONUMENT
-# ─────────────────────────────────
 OBJ_FILE = r"C:\Users\Suyash goyal\Downloads\pottery-jug\source\HCM256\HCM256.obj"
 
 print("\nLoading monument...")
 mesh = o3d.io.read_triangle_mesh(OBJ_FILE)
 mesh.compute_vertex_normals()
-print("Monument loaded ✅")
+print("Monument loaded")
 
-# ─────────────────────────────────
 # RICH FEATURE EXTRACTION
-# ─────────────────────────────────
 def extract_rich_features(pcd, radius=0.05):
     pcd.estimate_normals(
         search_param=o3d.geometry.KDTreeSearchParamHybrid(
@@ -101,11 +97,9 @@ def extract_rich_features(pcd, radius=0.05):
 
     return features, curvature, roughness
 
-# ─────────────────────────────────
 # FIXED LABELING STRATEGY
 # Use curvature threshold instead
 # of neighbor-side comparison
-# ─────────────────────────────────
 def get_smart_labels(curvature, roughness,
                      density):
 
@@ -136,10 +130,8 @@ def get_smart_labels(curvature, roughness,
 
     return labels, break_score
 
-# ─────────────────────────────────
 # GENERATE TRAINING DATA
 # Multiple point densities
-# ─────────────────────────────────
 print("\nGenerating training data...")
 
 all_features = []
@@ -178,19 +170,15 @@ print(f"Break points  : {np.sum(y==1)}"
       f" ({round(np.sum(y==1)/len(y)*100,1)}%)")
 print(f"Normal points : {np.sum(y==0)}"
       f" ({round(np.sum(y==0)/len(y)*100,1)}%)")
-print("Training data generated ✅")
+print("Training data generated")
 
-# ─────────────────────────────────
 # SCALE FEATURES
-# ─────────────────────────────────
 print("\nScaling features...")
 scaler   = StandardScaler()
 X_scaled = scaler.fit_transform(X)
-print("Features scaled ✅")
+print("Features scaled")
 
-# ─────────────────────────────────
 # SPLIT DATA
-# ─────────────────────────────────
 X_train, X_test, y_train, y_test = \
     train_test_split(
         X_scaled, y,
@@ -202,9 +190,7 @@ X_train, X_test, y_train, y_test = \
 print(f"\nTraining : {len(X_train)} samples")
 print(f"Testing  : {len(X_test)} samples")
 
-# ─────────────────────────────────
 # TRAIN MODEL
-# ─────────────────────────────────
 print("\nTraining model...")
 print("Please wait...")
 
@@ -219,11 +205,9 @@ model = RandomForestClassifier(
 )
 
 model.fit(X_train, y_train)
-print("Model trained ✅")
+print("Model trained")
 
-# ─────────────────────────────────
 # EVALUATE
-# ─────────────────────────────────
 print("\nEvaluating...")
 
 y_pred   = model.predict(X_test)
@@ -244,10 +228,10 @@ print(f"CV Std     : "
       f"{round(cv_scores.std()*100, 2)}%")
 
 if accuracy >= 0.80:
-    print("\n🎉 TARGET ACHIEVED ✅")
+    print("\n🎉 TARGET ACHIEVED")
     print("≥80% accuracy reached!")
 else:
-    print(f"\n⚠️ {round(accuracy*100,2)}% — "
+    print(f"\n {round(accuracy*100,2)}% — "
           f"getting closer!")
 
 print("\nDetailed Report:")
@@ -256,9 +240,7 @@ print(classification_report(
     target_names=["Normal", "Break"]
 ))
 
-# ─────────────────────────────────
 # FEATURE IMPORTANCE
-# ─────────────────────────────────
 feature_names = [
     "x", "y", "z",
     "nx", "ny", "nz",
@@ -280,9 +262,7 @@ for name, imp in sorted(
     bar = "█" * int(imp * 50)
     print(f"{name:12} {bar} {round(imp,4)}")
 
-# ─────────────────────────────────
 # SAVE MODEL
-# ─────────────────────────────────
 print("\nSaving model...")
 os.makedirs("results", exist_ok=True)
 
@@ -292,11 +272,9 @@ with open("results/trained_model.pkl", "wb") as f:
 with open("results/scaler.pkl", "wb") as f:
     pickle.dump(scaler, f)
 
-print("Model saved ✅")
+print("Model saved")
 
-# ─────────────────────────────────
 # VISUALIZE PREDICTIONS
-# ─────────────────────────────────
 print("\nVisualizing predictions...")
 
 pcd = mesh.sample_points_uniformly(
@@ -330,9 +308,7 @@ o3d.visualization.draw_geometries(
     height=600
 )
 
-# ─────────────────────────────────
 # PLOT RESULTS
-# ─────────────────────────────────
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
 # Confusion Matrix
@@ -395,6 +371,6 @@ plt.savefig("results/ml_results.png")
 plt.show()
 
 print("\n" + "="*40)
-print("FIXED ML CLASSIFIER COMPLETE ✅")
+print("FIXED ML CLASSIFIER COMPLETE")
 print("="*40)
 print("Next: Run 05_matching_algorithm.py")
