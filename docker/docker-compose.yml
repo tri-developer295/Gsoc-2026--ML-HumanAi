@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  gsoc-project:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: gsoc2026_break_detection
+    volumes:
+      # Mount data folder
+      - ../data:/app/data
+      # Mount results folder
+      - ../results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python src/06_evaluation.py
