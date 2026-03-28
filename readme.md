@@ -3,7 +3,7 @@
        alt="HumanAI Foundation"
        height="80"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src=assets/logo.svg
+  <img src=assets/logo (1).svg
        alt="Google Summer of Code"
        height="80"/>
 </p>
