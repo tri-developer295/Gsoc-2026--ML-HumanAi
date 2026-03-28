@@ -504,22 +504,22 @@ Mean F1 Score  : 0.83+
 
 ## 📊 Dataset
 
-| Dataset | Source | Format | Purpose |
-|---|---|---|---|
-| Chukur Fountain Monument | Sketchfab | .OBJ | Primary test object |
-| Pottery Vessel (Jomon) | Smithsonian 3D | .OBJ | Heritage artifact |
-| Stanford Bunny | Stanford 3D | .PLY | Pipeline testing |
-| Simulated Breaks | Generated | .PLY | Training data |
+| Dataset | Source | Format | 
+|---|---|---|
+| Pottery Vessel (Jomon) | Sketchfab | .OBJ | 
+| Plaque-grand-place-brussels | Scan the world | .OBJ | 
+| white-lady-southern-necropolis-glasgow | Scan the world | .FBX | 
 
 **Dataset Citation:**
 ```
-Smithsonian 3D Digitization:
+Sketchfab 3D Digitization:
 → Pottery Vessel (Horinouchi Type)
 → Source: 3d.si.edu
 → License: Usage Conditions Apply (Research Use)
 
-Stanford 3D Scanning Repository:
-→ Stanford Bunny
+Scan the world 3D Digitization:
+→ Plaque-grand-place-brussels
+→ white-lady-southern-necropolis-glasgow
 → Source: graphics.stanford.edu
 → License: Free for research use
 ```
