@@ -142,11 +142,11 @@ GSoC-2026-HumanAI/
 |
 ├── HCM256.jpg                        # dataset for pottery(texture)
 ├── HCM256.obj                        # dataset for pottery(source)
-├── Scaniverse.jpg                    # dataset for
-├── Scaniverse.mtl                    # dataset for
-├── Scaniverse.obj                    # dataset for
-├── plaque-grand-place-brussels.fbx   # dataset for
-├── plaque-grand-place-brussels.jpg   # dataset for 
+├── Scaniverse.jpg                    # dataset for statue(textures)
+├── Scaniverse.mtl                    # dataset for statue
+├── Scaniverse.obj                    # dataset for statue(source)
+├── plaque-grand-place-brussels.fbx   # dataset for monument(source)
+├── plaque-grand-place-brussels.jpg   # dataset for monument(texture)
 │            
 ├── assets/                           # Saved logo for readme.md file
 │   └── Gsoc-Vertical.png            
@@ -561,8 +561,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ## 👤 Author
 
 **Suyash Goyal**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [your-linkedin](https://linkedin.com/in/yourprofile)
+- GitHub: [@tri-developer295](https://github.com/tri-developer295)
+- LinkedIn: [Suyash](https://www.linkedin.com/in/suyash-goyal-a4921a333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - GSoC 2026 — HumanAI Foundation
 
 ---
