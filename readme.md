@@ -157,6 +157,7 @@ GSoC-2026-HumanAI/
 │   └── Dockerfile                    # Container setup 
 |   └── docker-compose.yml
 |   └── requirments.txt
+|
 ├── output/screenshot/
 |   └── break_simulation.jpeg         # shows the damage of the object
 |   └── debug_accuracy.jpeg           # used to raise the accuarcy of the model
