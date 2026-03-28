@@ -1,6 +1,21 @@
-# 🏛️ GSoC 2026 — Break Surface Detection & Fragment Matching
-### Organization: HumanAI Foundation
-### Project: Geometric Feature Extraction for Automated Break Surface Detection
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tri-develper295/Gsoc-2026--ML-HumanAI/main/assets/humanai.jpg"
+       alt="HumanAI Foundation"
+       height="80"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/tri-develper295/Gsoc-2026--ML-HumanAI/main/assets/logo.svg"
+       alt="Google Summer of Code"
+       height="80"/>
+</p>
+
+<h1 align="center">
+GSoC 2026 — Break Surface Detection & Fragment Matching
+</h1>
+
+<p align="center">
+  <b>Organization: HumanAI Foundation</b><br>
+  <b>Project: Geometric Feature Extraction for Automated Break Surface Detection</b>
+</p>
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![Open3D](https://img.shields.io/badge/Open3D-0.18.0-green)
