@@ -3,7 +3,7 @@
        alt="HumanAI Foundation"
        height="80"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/tri-develper295/Gsoc-2026--ML-HumanAI/main/assets/logo.svg"
+  <img src=assets/logo.svg
        alt="Google Summer of Code"
        height="80"/>
 </p>
