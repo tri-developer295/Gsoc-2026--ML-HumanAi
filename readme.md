@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tri-develper295/Gsoc-2026--ML-HumanAI/main/assets/humanai.jpg"
+  <img src=assets/humanai.jpg
        alt="HumanAI Foundation"
        height="80"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
