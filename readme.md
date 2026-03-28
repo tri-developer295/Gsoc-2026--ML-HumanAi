@@ -122,45 +122,41 @@ When physical objects like ancient monuments, pottery, and artifacts break, rese
 GSoC-2026-HumanAI/
 │
 ├── src/                              # All Python scripts
+|   ├── results/                          # Output files
+│   |     ├── feature_matrix.npy            # Extracted features
+│   |     ├── boundary_mask.npy             # Break surface labels
+│   |     ├── fragment_A.ply                # Simulated fragment A
+│   |     ├── fragment_B.ply                # Simulated fragment B
+│   |     ├── trained_model.pkl             # Trained KNN model
+│   |     ├── scaler.pkl                    # Feature scaler
+│   |     ├── ml_results.png                # ML accuracy plots
+│   |     ├── matching_scores.png           # Fragment matching plots
+│   |     ├── final_evaluation.png          # Final evaluation plots
+│   |     └── final_report.txt              # Text evaluation report
 │   ├── 01_load_visualize.py          # Load and visualize 3D scan
 │   ├── 02_feature_extraction.py      # Extract geometric features
 │   ├── 03_break_simulation.py        # Simulate break on monument
 │   ├── 04_ml_classifier.py           # Train ML classifier
 │   ├── 05_matching_algorithm.py      # Match break surfaces
 │   └── 06_evaluation.py              # Final evaluation & report
+|
+├── HCM256.jpg                        # dataset for pottery(texture)
+├── HCM256.obj                        # dataset for pottery(source)
+├── Scaniverse.jpg                    # dataset for
+├── Scaniverse.mtl                    # dataset for
+├── Scaniverse.obj                    # dataset for
+├── plaque-grand-place-brussels.fbx   # dataset for
+├── plaque-grand-place-brussels.jpg   # dataset for 
+│            
+├── assets/                           # Saved logo for readme.md file
+│   └── Gsoc-Vertical.png            
+|   └── humanai.jpg
 │
-├── data/                             # Dataset files (not committed)
-│   ├── stanford/                     # Stanford 3D scan models
-│   │   ├── bunny.ply
-│   │   └── dragon.ply
-│   ├── smithsonian/                  # Smithsonian 3D artifacts
-│   │   └── pottery_vessel.obj
-│   └── monuments/                    # Monument scan files
-│       └── chukur_fountain/
-│           ├── untitledTexturePainted.obj
-│           ├── untitledTexturePainted.mtl
-│           └── textures/
-│
-├── models/                           # Saved ML models
-│   └── trained_classifier.pkl        # Auto-generated after training
-│
-├── results/                          # Output files
-│   ├── feature_matrix.npy            # Extracted features
-│   ├── boundary_mask.npy             # Break surface labels
-│   ├── fragment_A.ply                # Simulated fragment A
-│   ├── fragment_B.ply                # Simulated fragment B
-│   ├── trained_model.pkl             # Trained KNN model
-│   ├── scaler.pkl                    # Feature scaler
-│   ├── ml_results.png                # ML accuracy plots
-│   ├── matching_scores.png           # Fragment matching plots
-│   ├── final_evaluation.png          # Final evaluation plots
-│   └── final_report.txt              # Text evaluation report
-│
-├── docs/                             # Documentation
-│   └── proposal.md                   # GSoC proposal draft
-│
+|
 ├── docker/                           # Docker configuration
 │   └── Dockerfile                    # Container setup
+|   └── docker-compose.yml
+|   └── requirments.txt
 │
 ├── requirements.txt                  # Python dependencies
 ├── .gitignore                        # Git ignore rules
