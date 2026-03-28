@@ -154,10 +154,20 @@ GSoC-2026-HumanAI/
 │
 |
 ├── docker/                           # Docker configuration
-│   └── Dockerfile                    # Container setup
+│   └── Dockerfile                    # Container setup 
 |   └── docker-compose.yml
 |   └── requirments.txt
-│
+├── output/screenshot/
+|   └── break_simulation.jpeg         # shows the damage of the object
+|   └── debug_accuracy.jpeg           # used to raise the accuarcy of the model
+|   └── evaluation.jpeg               # here it shows the summary of the final model
+|   └── feature_extraction.jpeg       # check the damage of the object
+|   └── load_visualize.jpeg           # load the obj file 
+|   └── matching_algorithm.jpeg       # data_visulation of the project
+|   └── matching_algorithm_02.jpeg    # final show of the obj file
+|   └── ml_classifier_visualize_data.jpeg # data_visulaization of the model
+|   └── ml_classifier.jpeg            # final evaluation of the model
+|
 ├── requirements.txt                  # Python dependencies
 ├── .gitignore                        # Git ignore rules
 ├── LICENSE                           # MIT License
